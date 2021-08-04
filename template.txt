@@ -1,19 +1,19 @@
-processor	16F84A			    ; turn on listing output
-#include	<p16f84a.inc>		    ; include file for register names
+processor		16F84A					; turn on listing output
+#include		<p16f84a.inc>		    ; include file for register names
 
-resVect		code	    0x00	    ; upcode
-    goto	start
+resVect			code	    0x00	    ; upcode
+    goto		init
     
-intVect		code	    0x04	    ; interrupt service routine
+intVect			code	    0x04	    ; interrupt service routine
     ; insert code
     retfie
     
-init					    ; initialisation
+init									; initialisation
     ; insert code
-    goto	main
+    goto		main
     
-main					    ; main code
+main									; main code
     ; insert code
-    goto	main
+    goto		main
     
 end
