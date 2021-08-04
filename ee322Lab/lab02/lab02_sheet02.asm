@@ -41,13 +41,13 @@ RB0_isr
     
     delay
 	
-		decfsz		0x0c,	    1   ; nested 0C decrement loop
-		goto		delay
+			decfsz		0x0c,	    1   ; nested 0Ch decrement loop
+			goto		delay
     
-	    decfsz	    0x0d,	    1	; nested 0D decrement loop
+	    decfsz	    0x0d,	    1	; nested 0Dh decrement loop
 	    goto	    delay
 	
-	decfsz	    0x0e,	    1	    ; 0E decrement loop
+	decfsz	    0x0e,	    1	    ; 0Eh decrement loop
 	goto	    delay
     
     bcf		PORTA,	    RA0		    ; clear RA0
